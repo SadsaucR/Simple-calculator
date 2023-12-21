@@ -78,12 +78,10 @@ double parseExpression(const char** expr)
         char op = *(*expr)++;
         double right = parseTerm(expr);
 
-        if (op == '+') {
-            left += right;
-        }
-        else {
-            left -= right;
-        }
+        if (op == '+')        
+            left += right;      
+        else        
+            left -= right;      
     }
 
     return left;
