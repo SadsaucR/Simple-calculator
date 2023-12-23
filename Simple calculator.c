@@ -32,7 +32,7 @@ double parseFactor(const char** expr) {
     }
     else 
     {
-        fprintf(stderr, "錯誤：不正確的表達式\n");
+        fprintf(stderr, "錯誤：不正確的運算式\n");
         exit(EXIT_FAILURE);
     }
 
@@ -91,7 +91,7 @@ int main()
 {
     char expression[100];
 
-    printf("輸入表達式：");
+    printf("請輸入運算式：");
     fgets(expression, sizeof(expression), stdin);
 
     // 移除換行符
@@ -108,6 +108,6 @@ int main()
     double result = parseExpression(&exprPtr);
 
     printf("結果：%.2f\n", result);
-
+    system("pause");
     return 0;
 }
